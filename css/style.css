@@ -100,11 +100,12 @@ li {
   padding: 30px;
   text-align: center;
 }
-.section_2__product img {
+.section_2__product .img {
   margin-bottom: 40px;
+  width: 250px;
 }
 .section_2__product img:hover {
-  width: 300px;
+  width: 280px;
 }
 .section_2__product h3 {
   font-family: "Roboto Slab", serif;
@@ -117,9 +118,6 @@ li {
 .section_2__product s {
   color: red;
   font-size: 20px;
-}
-.section_2__product .img {
-  width: 250px;
 }
 .section_2__text {
   position: absolute;
