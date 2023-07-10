@@ -81,4 +81,48 @@ li {
   font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 50px;
+  margin-bottom: 100px;
+}
+.section_2__katalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.section_2__product {
+  position: relative;
+  border: 1px solid black;
+  height: 400px;
+  width: 300px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding: 30px;
+  text-align: center;
+}
+.section_2__product img {
+  margin-bottom: 40px;
+}
+.section_2__product img:hover {
+  width: 300px;
+}
+.section_2__product h3 {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.section_2__product span {
+  font-size: 25px;
+}
+.section_2__product s {
+  color: red;
+  font-size: 20px;
+}
+.section_2__product .img {
+  width: 250px;
+}
+.section_2__text {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
 }
