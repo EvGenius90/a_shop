@@ -20,26 +20,28 @@ li {
     margin-left: 20px;
   }
 }
-.section_1 {
-  background: url("../img/nabor_instumentov2.jpg") no-repeat;
-  height: 800px;
-}
-
 .container {
   max-width: 1250px;
   height: 500px;
   margin: 0 auto;
 }
-.container__header {
+
+.section_1 {
+  background: url("../img/nabor_instumentov2.jpg") no-repeat;
+  height: 800px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.section_1__header {
   margin: 0 auto;
 }
-.container__images {
+.section_1__images {
   margin-top: -30px;
   height: 150px;
   width: 250px;
   margin-bottom: 70px;
 }
-.container__navigation {
+.section_1__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,16 +50,35 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.container__navigation li:not(:last-child) {
+.section_1__navigation li:not(:last-child) {
   margin-bottom: 50px;
 }
-.container__navigation a {
+.section_1__navigation a {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-size: 40px;
 }
-.container__navigation a:hover {
+.section_1__navigation a:hover {
   color: red;
   margin-left: 20px;
+  font-size: 50px;
+}
+.section_1__input {
+  position: absolute;
+  bottom: 90px;
+  height: 20px;
+}
+.section_1__input input {
+  width: 500px;
+  height: 30px;
+}
+.section_1__input button {
+  height: 36px;
+  width: 70px;
+}
+
+.section_2__h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
   font-size: 50px;
 }

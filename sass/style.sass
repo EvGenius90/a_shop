@@ -11,16 +11,17 @@ li
 @keyframes animation
     100%
         margin-left: 20px
-    
-.section_1
-    background: url('../img/nabor_instumentov2.jpg') no-repeat
-    height: 800px
 
 .container
     max-width: 1250px
     height: 500px
     margin: 0 auto
-    // border: 1px solid black
+    
+.section_1
+    background: url('../img/nabor_instumentov2.jpg') no-repeat
+    height: 800px
+    position: relative
+    margin-bottom: 100px
     &__header
         margin: 0 auto
     &__images
@@ -31,18 +32,37 @@ li
     &__navigation
         display: flex
         flex-direction: column
-        
         li:not(:last-child)
             margin-bottom: 50px
         a
             font-family: 'Roboto Slab', serif
             font-weight: 400
             font-size: 40px
-            
         a:hover
             color: red
             // animation-name: animation
             // animation-duration: 0.5s
             margin-left: 20px
             font-size: 50px
+    &__input
+        position: absolute
+        bottom: 90px
+        height: 20px
+        input
+            width: 500px
+            height: 30px
+        button
+            height: 36px
+            width: 70px
+
+
+    
+
+.section_2
+    &__h2
+        font-family: 'Roboto Slab', serif
+        font-weight: 500
+        font-size: 50px
+    
+
 
