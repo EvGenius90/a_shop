@@ -1,2 +1,48 @@
-p
-    color: blue
+@import "reset.css"
+@import "normalize.css"
+
+a
+    text-decoration: none
+    color: #023047
+
+li
+    list-style: none
+
+@keyframes animation
+    100%
+        margin-left: 20px
+    
+.section_1
+    background: url('../img/nabor_instumentov2.jpg') no-repeat
+    height: 800px
+
+.container
+    max-width: 1250px
+    height: 500px
+    margin: 0 auto
+    // border: 1px solid black
+    &__header
+        margin: 0 auto
+    &__images
+        margin-top: -30px
+        height: 150px
+        width: 250px
+        margin-bottom: 70px
+    &__navigation
+        display: flex
+        flex-direction: column
+        
+        li:not(:last-child)
+            margin-bottom: 50px
+        a
+            font-family: 'Roboto Slab', serif
+            font-weight: 400
+            font-size: 40px
+            
+        a:hover
+            color: red
+            // animation-name: animation
+            // animation-duration: 0.5s
+            margin-left: 20px
+            font-size: 50px
+

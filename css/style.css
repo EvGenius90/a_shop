@@ -1,3 +1,63 @@
-p {
-  color: blue;
+@import "reset.css";
+@import "normalize.css";
+a {
+  text-decoration: none;
+  color: #023047;
+}
+
+li {
+  list-style: none;
+}
+
+@-webkit-keyframes animation {
+  100% {
+    margin-left: 20px;
+  }
+}
+
+@keyframes animation {
+  100% {
+    margin-left: 20px;
+  }
+}
+.section_1 {
+  background: url("../img/nabor_instumentov2.jpg") no-repeat;
+  height: 800px;
+}
+
+.container {
+  max-width: 1250px;
+  height: 500px;
+  margin: 0 auto;
+}
+.container__header {
+  margin: 0 auto;
+}
+.container__images {
+  margin-top: -30px;
+  height: 150px;
+  width: 250px;
+  margin-bottom: 70px;
+}
+.container__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container__navigation li:not(:last-child) {
+  margin-bottom: 50px;
+}
+.container__navigation a {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+.container__navigation a:hover {
+  color: red;
+  margin-left: 20px;
+  font-size: 50px;
 }
