@@ -21,7 +21,7 @@ li {
   }
 }
 .container {
-  max-width: 1250px;
+  max-width: 1450px;
   height: 500px;
   margin: 0 auto;
 }
@@ -29,7 +29,6 @@ li {
 .section_1 {
   background: url("../img/nabor_instumentov2.jpg") no-repeat;
   height: 800px;
-  position: relative;
   margin-bottom: 100px;
 }
 .section_1__header {
@@ -63,25 +62,35 @@ li {
   margin-left: 20px;
   font-size: 50px;
 }
-.section_1__input {
-  position: absolute;
-  bottom: 90px;
-  height: 20px;
+
+.section_2 .icons {
+  width: 40px;
+  height: 40px;
+  display: inline;
+  margin-right: 50px;
 }
-.section_1__input input {
-  width: 500px;
+.section_2 .icons p {
+  display: inline;
+}
+.section_2__input {
+  display: inline;
+  top: 0;
+}
+.section_2__button {
+  width: 80px;
+  height: 36px;
+}
+.section_2__find {
+  width: 400px;
   height: 30px;
 }
-.section_1__input button {
-  height: 36px;
-  width: 70px;
-}
-
 .section_2__h2 {
   font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 50px;
   margin-bottom: 100px;
+  display: inline;
+  margin-right: 150px;
 }
 .section_2__katalog {
   display: -webkit-box;
@@ -92,13 +101,22 @@ li {
 }
 .section_2__product {
   position: relative;
-  border: 1px solid black;
   height: 400px;
   width: 300px;
-  margin-right: 50px;
+  margin-right: 120px;
   margin-bottom: 50px;
   padding: 30px;
   text-align: center;
+}
+.section_2__product .text__button {
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  background-color: #fb8500;
+}
+.section_2__product .text__favoutires {
+  margin-right: 20px;
 }
 .section_2__product .img {
   margin-bottom: 40px;
@@ -111,6 +129,9 @@ li {
   font-family: "Roboto Slab", serif;
   margin-bottom: 15px;
   font-weight: 500;
+}
+.section_2__product p {
+  margin-bottom: 40px;
 }
 .section_2__product span {
   font-size: 25px;
