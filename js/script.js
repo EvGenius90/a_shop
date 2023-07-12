@@ -17,9 +17,13 @@ const basket_number = document.querySelectorAll('.text__basket')
 for(let value of favoutires){
     value.addEventListener('click', function(){
         let heart = document.querySelector('.fa-heart__span')
-        heart.innerHTML = count_favourites++
-        if(heart.textContent > 1){
-            alert('Вы уже лайкали')
+        // heart.innerHTML = count_favourites++
+        
+        for(count_favourites; count_favourites > 0; count_favourites++){
+            heart.innerHTML = count_favourites
+            if(heart.textContent == 1){
+            }
+            break
         }
     })
 }
