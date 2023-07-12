@@ -1,9 +1,14 @@
-const heart = document.querySelector('.fa-heart__span')
+// const heart = document.querySelector('.fa-heart__span')
 
 const basket = document.querySelector('.fa-cart-shopping__basket')
 
-// heart.textContent = 0
-// console.dir(heart)
+let count_favourites = 1
+
+let count_products = 1
+
+
+
+const a = true
 
 const favoutires = document.querySelectorAll('.text__favoutires')
 
@@ -11,17 +16,17 @@ const basket_number = document.querySelectorAll('.text__basket')
 
 for(let value of favoutires){
     value.addEventListener('click', function(){
-        for(let i = 0; i <= 1; i++){
-            heart.innerHTML = i
+        let heart = document.querySelector('.fa-heart__span')
+        heart.innerHTML = count_favourites++
+        if(heart.textContent > 1){
+            alert('Вы уже лайкали')
         }
     })
 }
 
 for(let value1 of basket_number){
     value1.addEventListener('click', function(){
-        for(let i = 0; i <= 1; i++){
-            basket.innerHTML = i
-        }
+        basket.innerHTML = count_products++
     })
 }
 

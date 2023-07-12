@@ -26,43 +26,45 @@ li {
   margin: 0 auto;
 }
 
-.section_1 {
-  background: url("../img/nabor_instumentov2.jpg") no-repeat;
-  height: 800px;
+.main {
+  height: 700px;
   margin-bottom: 100px;
+  background: url("../img/nabor_instumentov4.jpg") no-repeat;
+  background-position: 50% 100%;
 }
-.section_1__header {
+.main__header {
   margin: 0 auto;
 }
-.section_1__images {
-  margin-top: -20px;
-  height: 150px;
-  width: 250px;
-  margin-bottom: 70px;
-}
-.section_1__navigation {
+.main__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.section_1__navigation li:not(:last-child) {
-  margin-bottom: 50px;
-}
-.section_1__navigation a {
+.main__contacts p {
   font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  font-size: 40px;
+  font-size: 15px;
 }
-.section_1__navigation a:hover {
-  color: red;
-  margin-left: 20px;
-  font-size: 50px;
+.main__images {
+  height: 150px;
+  width: 250px;
 }
-
+.main__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
 .section_2 .icons {
   width: 40px;
   height: 40px;

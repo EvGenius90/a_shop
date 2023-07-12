@@ -17,33 +17,34 @@ li
     height: 500px
     margin: 0 auto
     
-.section_1
-    background: url('../img/nabor_instumentov2.jpg') no-repeat
-    height: 800px
+.main
+    height: 700px
     // position: relative
     margin-bottom: 100px
+    background: url('../img/nabor_instumentov4.jpg') no-repeat
+    background-position: 50% 100%
     &__header
         margin: 0 auto
+    &__contacts
+        display: flex
+        align-items: center
+        justify-content: space-between
+        p
+            font-family: 'Roboto Slab', serif
+            font-size: 15px
     &__images
-        margin-top: -20px
+        // margin-top: -20px
         height: 150px
         width: 250px
-        margin-bottom: 70px
+        // margin-bottom: 70px
     &__navigation
         display: flex
-        flex-direction: column
-        li:not(:last-child)
-            margin-bottom: 50px
-        a
-            font-family: 'Roboto Slab', serif
-            font-weight: 400
-            font-size: 40px
-        a:hover
-            color: red
-            // animation-name: animation
-            // animation-duration: 0.5s
-            margin-left: 20px
-            font-size: 50px 
+        justify-content: space-between
+        font-family: 'Roboto Slab', serif
+        font-size: 20px
+        font-weight: 600
+        li
+            // margin-right: 150px
 
 .section_2
     .icons
