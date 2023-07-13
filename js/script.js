@@ -2,6 +2,8 @@
 
 const basket = document.querySelector('.fa-cart-shopping__basket')
 
+// let quantity = document.querySelector('.quantity')
+
 let count_favourites = 1
 
 let count_products = 1
@@ -13,6 +15,8 @@ const a = true
 const favoutires = document.querySelectorAll('.text__favoutires')
 
 const basket_number = document.querySelectorAll('.text__basket')
+
+
 
 for(let value of favoutires){
     value.addEventListener('click', function(){
@@ -30,7 +34,16 @@ for(let value of favoutires){
 
 for(let value1 of basket_number){
     value1.addEventListener('click', function(){
+        let quantity = document.querySelector('.quantity').textContent--
         basket.innerHTML = count_products++
+        for(quantity; quantity < 5;){
+            if(quantity == 1){
+                alert('asda')
+            }
+            break
+        }
+        // quantity.innerHTML = quantity--
+        // basket.innerHTML = basket++
     })
 }
 
