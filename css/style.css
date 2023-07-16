@@ -101,6 +101,22 @@ li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.section_2__add-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+}
+.section_2__add-product .add-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section_2__add-product button {
+  height: 25px;
+}
 .section_2__product {
   position: relative;
   height: 400px;
