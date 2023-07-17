@@ -47,7 +47,7 @@ li {
           justify-content: space-between;
 }
 .main__contacts p {
-  font-family: "Roboto Slab", serif;
+  font-family: "Playfair Display", serif;
   font-size: 15px;
 }
 .main__images {
@@ -61,9 +61,9 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Roboto Slab", serif;
-  font-size: 20px;
-  font-weight: 600;
+  font-family: "PT Serif", serif;
+  font-size: 25px;
+  font-weight: 700;
 }
 .section_2 .icons {
   width: 40px;
