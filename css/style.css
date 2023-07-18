@@ -36,6 +36,7 @@ li {
   margin: 0 auto;
 }
 .main__contacts {
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,14 +46,16 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #e7e8ed;
+  margin-bottom: 20px;
 }
 .main__contacts p {
   font-family: "Playfair Display", serif;
   font-size: 15px;
 }
 .main__images {
-  height: 150px;
-  width: 250px;
+  height: 50px;
+  width: 100px;
 }
 .main__navigation {
   display: -webkit-box;
@@ -64,6 +67,9 @@ li {
   font-family: "PT Serif", serif;
   font-size: 25px;
   font-weight: 700;
+}
+.section_2__navigation {
+  margin-bottom: 30px;
 }
 .section_2 .icons {
   width: 40px;
