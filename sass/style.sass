@@ -1,6 +1,9 @@
 @import "reset.css"
 @import "normalize.css"
 
+// ?Переменные цветов
+$buttons-color: #fb8500
+
 a
     text-decoration: none
     color: #023047
@@ -16,10 +19,9 @@ li
     max-width: 1450px
     height: 500px
     margin: 0 auto
-    
+
 .main
     height: 700px
-    // position: relative
     margin-bottom: 100px
     background: url('../img/nabor_instumentov4.jpg') no-repeat
     background-position: 50% 100%
@@ -33,10 +35,8 @@ li
             font-family: 'Playfair Display', serif
             font-size: 15px
     &__images
-        // margin-top: -20px
         height: 150px
         width: 250px
-        // margin-bottom: 70px
     &__navigation
         display: flex
         justify-content: space-between
@@ -73,6 +73,7 @@ li
     &__katalog
         display: flex
         flex-wrap: wrap
+        justify-content: space-between
     &__add-product
         display: flex
         justify-content: space-around
@@ -81,27 +82,29 @@ li
             display: flex
         button
             height: 25px
+    
     &__product
+        // border: 1px solid black
         position: relative
-        height: 400px
+        height: 500px
         width: 300px
-        margin-right: 120px
         margin-bottom: 50px
-        padding: 30px
         text-align: center
         .text__button
             width: 40px
             height: 30px
             border: none
             border-radius: 15px
-            background-color: #fb8500
+            background-color: $buttons-color
         .text__favoutires
             margin-right: 20px
-        .img
-            margin-bottom: 40px
+        a
+            margin-bottom: 50px
+        img
+            margin-bottom: 30px
             width: 250px
-        img:hover
-            width: 280px
+        // img:hover
+        //     width: 280px
         h3
             font-family: 'Roboto Slab', serif
             margin-bottom: 15px
@@ -113,10 +116,23 @@ li
         s
             color: red
             font-size: 20px
-        
     &__text
         position: absolute
-        bottom: 50px
-        left: 100px
+        bottom: 0px
+        width: 100%
+        .add-product
+            width: 80px
+            display: flex
+            justify-content: space-between
+            .minus
+                border: none
+                background-color: $buttons-color
+                border-radius: 15px
+                width: 30px
+            .plus
+                border: none
+                background-color: $buttons-color
+                border-radius: 15px
+                width: 30px
 
 
