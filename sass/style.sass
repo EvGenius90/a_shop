@@ -3,13 +3,15 @@
 
 // ?Переменные цветов
 $buttons-color: #fb8500
+$color: #575b71
 
 a
     text-decoration: none
     color: #023047
 
-li
-    list-style: none
+body
+    font-family: 'Open Sans', sans-serif
+    color: $color
 
 @keyframes animation
     100%
@@ -34,7 +36,6 @@ li
         background-color: lighten(#8184a1, 35%) 
         margin-bottom: 20px
         p
-            font-family: 'Open Sans', sans-serif
             font-size: 15px
     &__images
         height: 50px
@@ -42,9 +43,10 @@ li
     &__navigation
         display: flex
         justify-content: space-between
-        font-family: 'Open Sans', sans-serif
         font-size: 25px
         font-weight: 600
+        li
+            list-style: none
         a:hover
             color: #cc9900
 
@@ -101,6 +103,9 @@ li
             border: none
             border-radius: 15px
             background-color: $buttons-color
+        .text__button:hover
+            background-color: darken($buttons-color, 8%)
+            color: white
         .text__favoutires
             margin-right: 20px
         a
@@ -126,28 +131,36 @@ li
         bottom: 0px
         width: 100%
         .add-product
-            width: 80px
+            width: 100px
             display: flex
             justify-content: space-between
             align-items: center
+            margin-bottom: 20px
+            background-color: $buttons-color
             .minus
                 border: none
                 background-color: $buttons-color
-                border-radius: 15px
                 width: 30px
+            .minus:hover
+                background-color: darken($buttons-color, 8%)
+                color: white
             .value
                 margin: 0
+                background-color: white
+                padding: 1px 15px
             .plus
                 border: none
                 background-color: $buttons-color
-                border-radius: 15px
                 width: 30px
+            .plus:hover
+                background-color: darken($buttons-color, 8%)
+                color: white
 
 .information
-    // &__text
-    //     h2
-    //         font-family: 'Open Sans', sans-serif
-    //     p
-    //         font-family: 'Open Sans', sans-serif
+    &__text
+        h2
+            color: $color
+        p
+            color: $color
 
 
