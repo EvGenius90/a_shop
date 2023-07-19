@@ -22,7 +22,7 @@ body {
 }
 .container {
   max-width: 1450px;
-  min-height: 900px;
+  min-height: 200px;
   margin: 0 auto;
 }
 
@@ -70,9 +70,14 @@ body {
   list-style: none;
 }
 .main__navigation a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #cc9900;
 }
 
+.section_2 {
+  margin-bottom: 50px;
+}
 .section_2__navigation {
   margin-bottom: 30px;
 }
@@ -151,6 +156,8 @@ body {
   background-color: #fb8500;
 }
 .section_2__product .text__button:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-color: #d26f00;
   color: white;
 }
@@ -204,6 +211,8 @@ body {
   width: 30px;
 }
 .section_2__text .add-product .minus:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-color: #d26f00;
   color: white;
 }
@@ -218,13 +227,75 @@ body {
   width: 30px;
 }
 .section_2__text .add-product .plus:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-color: #d26f00;
   color: white;
 }
 
+.information {
+  margin-bottom: 50px;
+}
+.information__text {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .information__text h2 {
   color: #575b71;
 }
 .information__text p {
   color: #575b71;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__menu li {
+  list-style: none;
+}
+.footer__menu a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #cc9900;
+}
+.footer__menu li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.footer__menu ul {
+  margin: 0;
+}
+.footer__social {
+  margin-bottom: 10px;
+}
+.footer__social div {
+  margin-bottom: 5px;
+}
+.footer__first-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.footer__first-list li {
+  font-size: 40px;
+}
+.footer__first-list li:not(:last-child) {
+  margin-right: 10px;
+}
+.footer__pay div {
+  margin-bottom: 5px;
+}
+.footer__second-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.footer__second-list li:not(:last-child) {
+  margin-right: 10px;
 }

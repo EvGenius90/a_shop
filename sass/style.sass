@@ -19,7 +19,7 @@ body
 
 .container
     max-width: 1450px
-    min-height: 900px
+    min-height: 200px
     margin: 0 auto
 .main
     height: 700px
@@ -48,9 +48,11 @@ body
         li
             list-style: none
         a:hover
+            transition: 0.3s
             color: #cc9900
 
 .section_2
+    margin-bottom: 50px
     &__navigation
         margin-bottom: 30px
     .icons
@@ -104,6 +106,7 @@ body
             border-radius: 15px
             background-color: $buttons-color
         .text__button:hover
+            transition: 0.3s
             background-color: darken($buttons-color, 8%)
             color: white
         .text__favoutires
@@ -142,6 +145,7 @@ body
                 background-color: $buttons-color
                 width: 30px
             .minus:hover
+                transition: 0.3s
                 background-color: darken($buttons-color, 8%)
                 color: white
             .value
@@ -153,14 +157,51 @@ body
                 background-color: $buttons-color
                 width: 30px
             .plus:hover
+                transition: 0.3s
                 background-color: darken($buttons-color, 8%)
                 color: white
 
 .information
+    margin-bottom: 50px
     &__text
+        max-width: 1000px
+        margin: 0 auto
         h2
             color: $color
         p
             color: $color
 
+.footer
+    &__menu
+        display: flex
+        justify-content: space-between
+        li
+            list-style: none
+        a:hover
+            transition: 0.3s
+            color: #cc9900
+        li:not(:last-child)
+            margin-bottom: 5px
+        ul
+            margin: 0
+    &__soc_pay
+    &__social
+        margin-bottom: 10px
+        div
+            margin-bottom: 5px
+    &__first-list
+        display: flex
+        padding: 0
+        li
+            font-size: 40px
+        li:not(:last-child)
+            margin-right: 10px
+    &__pay
+        div
+            margin-bottom: 5px
+    &__second-list
+        display: flex
+        padding: 0
+        li:not(:last-child)
+            margin-right: 10px   
 
