@@ -49,6 +49,11 @@ body {
   background-color: #e7e8ed;
   margin-bottom: 20px;
 }
+.main__contacts a:hover {
+  color: #cc9900;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .main__contacts p {
   font-size: 15px;
 }
@@ -73,6 +78,9 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #cc9900;
+  -webkit-box-shadow: 5px 4px 5px #fb8500;
+          box-shadow: 5px 4px 5px #fb8500;
+  border-radius: 13px;
 }
 
 .section_2 {
@@ -282,7 +290,7 @@ body {
   padding: 0;
 }
 .footer__first-list li {
-  font-size: 40px;
+  font-size: 30px;
 }
 .footer__first-list li:not(:last-child) {
   margin-right: 10px;
