@@ -93,13 +93,16 @@ body {
 .main__navigation li {
   list-style: none;
 }
+.main__navigation a {
+  border-radius: 13px;
+}
 .main__navigation a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #cc9900;
   -webkit-box-shadow: 5px 4px 5px #fb8500;
           box-shadow: 5px 4px 5px #fb8500;
-  border-radius: 13p;
+  border-radius: 13px;
 }
 .main__label {
   position: absolute;
