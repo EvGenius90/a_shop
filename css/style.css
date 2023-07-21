@@ -149,10 +149,22 @@ body {
 .section_2__button {
   width: 80px;
   height: 36px;
+  background-color: #fb8500;
+  border: none;
+  border-radius: 20px;
+  color: #333333;
+}
+.section_2__button:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #d26f00;
+  color: white;
 }
 .section_2__find {
   width: 400px;
   height: 30px;
+  border-radius: 10px;
+  border-color: #dee0ee;
 }
 .section_2__h2 {
   font-family: "Roboto Slab", serif;

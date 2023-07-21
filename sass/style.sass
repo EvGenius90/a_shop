@@ -102,9 +102,19 @@ body
     &__button
         width: 80px
         height: 36px
+        background-color: $buttons-color
+        border: none
+        border-radius: 20px
+        color: lighten(black, 20%) 
+    &__button:hover
+        transition: 0.3s
+        background-color: darken($buttons-color, 8%)
+        color: white
     &__find
         width: 400px
         height: 30px
+        border-radius: 10px
+        border-color: #dee0ee
     &__h2
         font-family: 'Roboto Slab', serif
         font-weight: 500
