@@ -31,6 +31,7 @@ body {
   margin-bottom: 100px;
   background: url("../img/nabor_instumentov4.jpg") no-repeat;
   background-position: 50% 100%;
+  position: relative;
 }
 .main__header {
   margin: 0 auto;
@@ -81,6 +82,27 @@ body {
   -webkit-box-shadow: 5px 4px 5px #fb8500;
           box-shadow: 5px 4px 5px #fb8500;
   border-radius: 13px;
+}
+.main__label {
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  left: 20%;
+  top: 25%;
+  padding: 10px;
+  text-align: center;
+  background-color: #ff9116;
+  color: #ffc300;
+}
+.main__label .label-inside {
+  border: 1px solid #dee0ee;
+  height: 150px;
+  width: 300px;
+}
+.main__label .label-inside hr {
+  width: 145px;
+  border-color: #fb8500;
+  margin: 0 auto;
 }
 
 .section_2 {
