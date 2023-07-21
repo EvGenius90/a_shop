@@ -92,7 +92,7 @@ body {
   padding: 10px;
   text-align: center;
   background-color: #ff9116;
-  color: #ffc300;
+  color: #ffe799;
 }
 .main__label .label-inside {
   border: 1px solid #dee0ee;
@@ -262,19 +262,31 @@ body {
   background-color: #d26f00;
   color: white;
 }
+.section_2__hr {
+  width: 1150px;
+}
 
 .information {
   margin-bottom: 50px;
 }
 .information__text {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 .information__text h2 {
   color: #575b71;
 }
 .information__text p {
   color: #575b71;
+}
+.information hr {
+  -webkit-box-shadow: 2px 3px 6px black;
+          box-shadow: 2px 3px 6px black;
+}
+
+.map {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .footer__menu {
@@ -291,7 +303,6 @@ body {
 .footer__menu a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #cc9900;
 }
 .footer__menu li:not(:last-child) {
   margin-bottom: 5px;
