@@ -191,7 +191,7 @@ body {
   font-size: 25px;
 }
 .section_2__product s {
-  color: red;
+  color: #e76f51;
   font-size: 20px;
 }
 .section_2__text {
@@ -294,6 +294,15 @@ body {
 }
 .footer__first-list li:not(:last-child) {
   margin-right: 10px;
+}
+.footer__first-list .fa-vk:hover {
+  color: #457b9d;
+}
+.footer__first-list .fa-square-youtube:hover {
+  color: #e63946;
+}
+.footer__first-list .fa-square-instagram:hover {
+  color: #fcbf49;
 }
 .footer__pay div {
   margin-bottom: 5px;
