@@ -1,4 +1,8 @@
 @import "normalize.css";
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #023047;
@@ -18,6 +22,20 @@ body {
 @keyframes animation {
   100% {
     margin-left: 20px;
+  }
+}
+@-webkit-keyframes slideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
+  }
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
   }
 }
 .container {
@@ -81,7 +99,7 @@ body {
   color: #cc9900;
   -webkit-box-shadow: 5px 4px 5px #fb8500;
           box-shadow: 5px 4px 5px #fb8500;
-  border-radius: 13px;
+  border-radius: 13p;
 }
 .main__label {
   position: absolute;
@@ -93,6 +111,10 @@ body {
   text-align: center;
   background-color: #ff9116;
   color: #ffe799;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: slideIn;
+          animation-name: slideIn;
 }
 .main__label .label-inside {
   border: 1px solid #dee0ee;
@@ -303,6 +325,7 @@ body {
 .footer__menu a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #cc9900;
 }
 .footer__menu li:not(:last-child) {
   margin-bottom: 5px;
