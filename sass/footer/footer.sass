@@ -1,0 +1,40 @@
+.footer
+    position: relative
+    z-index: 1
+    &__menu
+        display: flex
+        justify-content: space-between
+        li
+            list-style: none
+        a:hover
+            transition: 0.3s
+            color: #cc9900
+        li:not(:last-child)
+            margin-bottom: 5px
+        ul
+            margin: 0
+    &__social
+        margin-bottom: 10px
+        div
+            margin-bottom: 5px
+    &__first-list
+        display: flex
+        padding: 0
+        li
+            font-size: 30px
+        li:not(:last-child)
+            margin-right: 10px
+        .fa-vk:hover
+            color: #457b9d
+        .fa-square-youtube:hover
+            color: #e63946
+        .fa-square-instagram:hover
+            color: #fcbf49
+    &__pay
+        div
+            margin-bottom: 5px
+    &__second-list
+        display: flex
+        padding: 0
+        li:not(:last-child)
+            margin-right: 10px   

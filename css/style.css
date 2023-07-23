@@ -38,23 +38,16 @@ body {
             transform: translateX(-80%);
   }
 }
-.container {
-  max-width: 1450px;
-  min-height: 200px;
-  margin: 0 auto;
-}
-
-.main {
+.sction-1 {
   height: 700px;
   margin-bottom: 100px;
   background: url("../img/nabor_instumentov4.jpg") no-repeat;
   background-position: 50% 100%;
-  position: relative;
 }
-.main__header {
+.sction-1__header {
   margin: 0 auto;
 }
-.main__contacts {
+.sction-1__contacts {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,19 +61,21 @@ body {
   background-color: #e7e8ed;
   margin-bottom: 20px;
 }
-.main__contacts a:hover {
-  color: #cc9900;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.sction-1__contacts a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-.main__contacts p {
+.sction-1__contacts a:hover {
+  color: #cc9900;
+}
+.sction-1__contacts p {
   font-size: 15px;
 }
-.main__images {
+.sction-1__images {
   height: 50px;
   width: 100px;
 }
-.main__navigation {
+.sction-1__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,26 +85,26 @@ body {
   font-size: 25px;
   font-weight: 600;
 }
-.main__navigation li {
+.sction-1__navigation li {
   list-style: none;
 }
-.main__navigation a {
+.sction-1__navigation a {
   border-radius: 13px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-.main__navigation a:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.sction-1__navigation a:hover {
   color: #cc9900;
   -webkit-box-shadow: 5px 4px 5px #fb8500;
           box-shadow: 5px 4px 5px #fb8500;
   border-radius: 13px;
 }
-.main__label {
+.sction-1__label {
   position: absolute;
   height: 150px;
   width: 300px;
-  left: 20%;
-  top: 25%;
+  left: 10%;
+  top: 100%;
   padding: 10px;
   text-align: center;
   background-color: #ff9116;
@@ -119,19 +114,50 @@ body {
   -webkit-animation-name: slideIn;
           animation-name: slideIn;
 }
-.main__label .label-inside {
+.sction-1__label .label-inside {
   border: 1px solid #dee0ee;
   height: 150px;
   width: 300px;
 }
-.main__label .label-inside hr {
+.sction-1__label .label-inside hr {
   width: 145px;
   border-color: #fb8500;
   margin: 0 auto;
 }
 
+.icon-support {
+  border: 1px solid black;
+  height: 100px;
+  width: 150px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: url("../img/support.jpg") 0 0/100% auto no-repeat;
+  z-index: 2;
+}
+
+.support {
+  border: 1px solid black;
+  height: 450px;
+  width: 300px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: green;
+  z-index: 2;
+}
+
+.is-active {
+  height: 0;
+}
+
+.height-bottom {
+  bottom: 450px;
+}
+
 .section_2 {
   margin-bottom: 50px;
+  position: relative;
 }
 .section_2__navigation {
   margin-bottom: 30px;
@@ -326,6 +352,10 @@ body {
   margin-bottom: 50px;
 }
 
+.footer {
+  position: relative;
+  z-index: 1;
+}
 .footer__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,4 +416,11 @@ body {
 }
 .footer__second-list li:not(:last-child) {
   margin-right: 10px;
+}
+
+.container {
+  max-width: 1450px;
+  min-height: 200px;
+  margin: 0 auto;
+  position: relative;
 }
