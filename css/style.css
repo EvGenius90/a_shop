@@ -437,10 +437,13 @@ body {
   text-align: center;
 }
 .set-of-products img {
-  width: 200px;
+  width: 150px;
 }
 
-.product-imgqwe {
-  height: 50px;
-  width: 10px;
+.product-title {
+  margin: 0;
+}
+
+.product-text {
+  margin: 0;
 }
