@@ -43,9 +43,12 @@ window.addEventListener("click", function (n) {
     if (
       (parseInt(counter.textContent) > 0)){
       counter.textContent--;
-      // basket.textContent--;
     }
-    
+
+    // если находится в корзине и ровно нулю
+    if(parseInt(counter.innerText) == 0){
+      n.target.closest('.section_2__product').remove()
+    }
   }
 });
 
@@ -67,7 +70,8 @@ window.addEventListener('click', function(event){
     // если есть товар в корзине
     if (itemInCart) {
       let volueEl = itemInCart.querySelector(".value");
-      volueEl.innerText = parseInt(product_info.itemsInBox);
+      volueEl.innerText = parseInt(volueEl.innerText) + parseInt(product_info.itemsInBox);
+      // volueEl.innerText = parseInt(product_info.itemsInBox);
       // если нет товара в корзине
     }else{
       const productItem = `
@@ -87,7 +91,9 @@ window.addEventListener('click', function(event){
         </div>
       `;
 
-      products.insertAdjacentHTML("beforeend", productItem);
-    }
+      products.insertAdjacentHTML("beforeend", productItem);}
+
+      // сброс счетчика до нуля
+      product.querySelector('.value').innerText = 0
   }
 })
