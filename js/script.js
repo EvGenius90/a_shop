@@ -1,5 +1,5 @@
 "use strict";
-
+// переменные
 const basket = document.querySelector(".fa-cart-shopping__basket");
 const favourites = document.querySelector(".fa-heart__span");
 let search = document.querySelector(".section_2__button");
@@ -8,11 +8,13 @@ let logo_support = document.querySelector(".icon-support");
 let support = document.querySelector(".support");
 let products = document.querySelector(".set-of-products");
 
+// окно поддержки
 logo_support.addEventListener("click", function () {
   support.classList.toggle("is-active");
   logo_support.classList.toggle("height-bottom");
 });
 
+// если в поисковике имеется слово, то меняется слово на кнопке на слово "искать"
 find.addEventListener("input", function () {
   if (find.value != "") {
     search.textContent = "Искать";
@@ -21,55 +23,71 @@ find.addEventListener("input", function () {
   }
 });
 
+// функция объекта window
 window.addEventListener("click", function (n) {
   let counter;
-  let product;
+  
   // проверяем клик по кнопкам плюс или минус
   if (n.target.dataset.action == "plus" || n.target.dataset.action == "minus") {
     // находим обертку счетчика
     const add_product = n.target.closest(".add-product");
-    // карточка товара
-    product = n.target.closest(".section_2__product");
     // находим div с числом счетчика
     counter = add_product.querySelector("[data-counter]");
   }
+  // если нажать на кнопку "плюс"
   if (n.target.dataset.action == "plus") {
     counter.textContent++;
-    basket.textContent++;
+  }
+  // если нажать на кнопку "минус"
+  if (n.target.dataset.action == "minus") {
+    if (
+      (parseInt(counter.textContent) > 0)){
+      counter.textContent--;
+      // basket.textContent--;
+    }
+    
+  }
+});
 
+window.addEventListener('click', function(event){
+  let product;
+  if(event.target.hasAttribute('data-bask')){
+    // карточка товара
+    product = event.target.closest(".section_2__product");
+    // шаблон корзины
     let product_info = {
       id: product.dataset.id,
       imgSrc: product.querySelector(".product-img").getAttribute("src"),
       title: product.querySelector(".product-title").innerText,
-      itemsInBox: product.querySelector("[data-counter]").innerText,
+      itemsInBox: product.querySelector('[data-counter]').innerText,
       price: product.querySelector(".price").innerText,
     };
 
     let itemInCart = products.querySelector(`[data-id="${product_info.id}"]`);
+    // если есть товар в корзине
     if (itemInCart) {
-      let volueEl = itemInCart.querySelector("[data-count]");
-      volueEl.innerText = "кол-во: " + parseInt(product_info.itemsInBox);
-      console.log(volueEl)
-    } else {
+      let volueEl = itemInCart.querySelector(".value");
+      volueEl.innerText = parseInt(product_info.itemsInBox);
+      // если нет товара в корзине
+    }else{
       const productItem = `
-    <div class="product-inside" data-id="${product_info.id}">
-      <h4 class="product-title">${product_info.title}</h4>
-      <img class="products-images" src="${product_info.imgSrc}" alt="">
-      <p class="product-text" data-count="">${"кол-во: " + product_info.itemsInBox}</p>
-      <p><small>${"цена: " + product_info.price}</small></p>
-    </div>
-    <hr>
-    `;
+      <div class="section_2__product" data-id="${product_info.id}">
+                    <a href="#"><img class="product-img" src="${product_info.imgSrc}" alt=""></a>
+                    <div class="section_2__text">
+                        <h3 class="product-title">${product_info.title}</h3>
+                        <p>Цена: <span class="price">${product_info.price}</span> <s>4300р.</s></p>
+                        <div class="section_2__add-product">
+                            <div class="add-product">
+                                <button class="minus" data-action="minus">-</button>
+                                <p class="value product-text" data-counter="">${product_info.itemsInBox}</p>
+                                <button class="plus" data-action="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+      `;
+
       products.insertAdjacentHTML("beforeend", productItem);
     }
   }
-  if (n.target.dataset.action == "minus") {
-    if (
-      (parseInt(counter.textContent) > 0) &
-      (parseInt(basket.textContent) > 0)
-    ) {
-      counter.textContent--;
-      basket.textContent--;
-    }
-  }
-});
+})

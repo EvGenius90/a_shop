@@ -44,10 +44,17 @@
         display: flex
         justify-content: space-around
         margin: 0 auto
-        .add-product
-            display: flex
         button
             height: 25px
+        .to-basket
+            border: none
+            border-radius: 20px
+            background-color: $buttons-color
+            transition: 0.5s
+            width: 100%
+            &:hover
+                color: white
+                background-color: darken($buttons-color, 8%)
     &__product:hover
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.36)
     &__product
@@ -92,12 +99,16 @@
         .add-product
             width: 100px
             display: flex
+            flex-wrap: wrap
             justify-content: space-between
             align-items: center
             margin-bottom: 20px
             background-color: $buttons-color
+            border-radius: 17px
+            // border: 1px solid black
             .minus
                 border: none
+                border-radius: 15px
                 background-color: $buttons-color
                 width: 30px
             .minus:hover
@@ -109,6 +120,7 @@
                 background-color: white
                 padding: 1px 15px
             .plus
+                border-radius: 15px
                 border: none
                 background-color: $buttons-color
                 width: 30px
@@ -118,3 +130,4 @@
                 color: white
     &__hr
         width: 1150px
+    
