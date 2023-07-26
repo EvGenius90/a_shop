@@ -1,4 +1,5 @@
 "use strict";
+
 // переменные
 const basket = document.querySelector(".fa-cart-shopping__basket");
 const favourites = document.querySelector(".fa-heart__span");
@@ -8,30 +9,34 @@ let logo_support = document.querySelector(".icon-support");
 let support = document.querySelector(".support");
 let products = document.querySelector(".set-of-products");
 let text_basket = document.querySelector(".text-basket");
-let like = document.querySelectorAll('.text__favoutires')
-let faHeart = document.querySelector('.fa-heart')
+let like = document.querySelectorAll(".text__favoutires");
+let faHeart = document.querySelector(".fa-heart");
+let emptyBasket = document.querySelector('.empty-basket')
 
 // счетчик любимых товаров
-for(let x of like){
-  x.addEventListener('click', function(){
-    let colorLike = x.classList.toggle('color-scheme')
-    if(colorLike){
-      favourites.textContent++
-      faHeart.classList.add('color-scheme')
-      console.log(colorLike)
-    }else{
-      favourites.textContent--
-      if(favourites.textContent == 0){
-        faHeart.classList.remove('color-scheme')
+for (let x of like) {
+  x.addEventListener("click", function () {
+    let colorLike = x.classList.toggle("color-scheme");
+    // если товар понравился, прибавлять счетчик на один
+    if (colorLike) {
+      favourites.textContent++;
+      faHeart.classList.add("color-scheme");
+      console.log(colorLike);
+      // если товар уже не понравился, отнимать счетчик на единицу
+    } else {
+      favourites.textContent--;
+      // если счетчик лайков равен нулю, то оставить кастомный цвет "избранное"
+      if (favourites.textContent == 0) {
+        faHeart.classList.remove("color-scheme");
       }
     }
-  })
+  });
 }
 
-text_basket.addEventListener('click', function(){
-  products.classList.toggle('hidden')
-  // console.log('good')
-})
+// скрвает/показывает окно корзины
+text_basket.addEventListener("click", function () {
+  products.classList.toggle("hidden");
+});
 
 // окно поддержки
 logo_support.addEventListener("click", function () {
@@ -51,7 +56,7 @@ find.addEventListener("input", function () {
 // функция объекта window
 window.addEventListener("click", function (n) {
   let counter;
-  
+
   // проверяем клик по кнопкам плюс или минус
   if (n.target.dataset.action == "plus" || n.target.dataset.action == "minus") {
     // находим обертку счетчика
@@ -65,21 +70,24 @@ window.addEventListener("click", function (n) {
   }
   // если нажать на кнопку "минус"
   if (n.target.dataset.action == "minus") {
-    if (
-      (parseInt(counter.textContent) > 0)){
+    if (parseInt(counter.textContent) > 0) {
       counter.textContent--;
     }
 
     // если находится в корзине и ровно нулю
-    if(n.target.closest('.set-of-products') && parseInt(counter.innerText) == 0){
-      n.target.closest('.section_2__product').remove()
+    if (
+      n.target.closest(".set-of-products") &&
+      parseInt(counter.innerText) == 0
+    ) {
+      n.target.closest(".section_2__product").remove();
+      statusbasket()
     }
   }
 });
 
-window.addEventListener('click', function(event){
+window.addEventListener("click", function (event) {
   let product;
-  if(event.target.hasAttribute('data-bask')){
+  if (event.target.hasAttribute("data-bask")) {
     // карточка товара
     product = event.target.closest(".section_2__product");
     // шаблон корзины
@@ -87,24 +95,26 @@ window.addEventListener('click', function(event){
       id: product.dataset.id,
       imgSrc: product.querySelector(".product-img").getAttribute("src"),
       title: product.querySelector(".product-title").innerText,
-      itemsInBox: product.querySelector('[data-counter]').innerText,
+      itemsInBox: product.querySelector("[data-counter]").innerText,
       price: product.querySelector(".price").innerText,
+      oldPrice: product.querySelector('.old-price').innerText,
     };
 
     let itemInCart = products.querySelector(`[data-id="${product_info.id}"]`);
     // если есть товар в корзине
     if (itemInCart) {
       let volueEl = itemInCart.querySelector(".value");
-      volueEl.innerText = parseInt(volueEl.innerText) + parseInt(product_info.itemsInBox);
+      volueEl.innerText =
+        parseInt(volueEl.innerText) + parseInt(product_info.itemsInBox);
       // volueEl.innerText = parseInt(product_info.itemsInBox);
       // если нет товара в корзине
-    }else{
+    } else {
       const productItem = `
       <div class="section_2__product" data-id="${product_info.id}">
                     <a href="#"><img class="product-img" src="${product_info.imgSrc}" alt=""></a>
                     <div class="section_2__text">
                         <h3 class="product-title">${product_info.title}</h3>
-                        <p>Цена: <span class="price">${product_info.price}</span> <s>4300р.</s></p>
+                        <p>Цена: <span class="price">${product_info.price}</span> <s>${product_info.oldPrice}</s></p>
                         <div class="section_2__add-product">
                             <div class="add-product">
                                 <button class="minus" data-action="minus">-</button>
@@ -115,10 +125,22 @@ window.addEventListener('click', function(event){
                     </div>
         </div>
       `;
+      products.insertAdjacentHTML("beforeend", productItem);
+    }
 
-      products.insertAdjacentHTML("beforeend", productItem);}
+    // сброс счетчика до нуля
+    product.querySelector(".value").innerText = 0;
 
-      // сброс счетчика до нуля
-      product.querySelector('.value').innerText = 0
+    statusbasket()
   }
-})
+});
+
+
+function statusbasket(){
+  let qwe = document.querySelector('.set-of-products')
+  if(qwe.children.length > 1){
+    emptyBasket.classList.add('disp-none')
+  }else(
+    emptyBasket.classList.remove('disp-none')
+  )
+}
