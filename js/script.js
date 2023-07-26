@@ -9,16 +9,21 @@ let support = document.querySelector(".support");
 let products = document.querySelector(".set-of-products");
 let text_basket = document.querySelector(".text-basket");
 let like = document.querySelectorAll('.text__favoutires')
+let faHeart = document.querySelector('.fa-heart')
 
 // счетчик любимых товаров
 for(let x of like){
   x.addEventListener('click', function(){
-    let colorCount = x.classList.toggle('color-scheme')
-    if(colorCount){
+    let colorLike = x.classList.toggle('color-scheme')
+    if(colorLike){
       favourites.textContent++
-      console.log(colorCount)
+      faHeart.classList.add('color-scheme')
+      console.log(colorLike)
     }else{
       favourites.textContent--
+      if(favourites.textContent == 0){
+        faHeart.classList.remove('color-scheme')
+      }
     }
   })
 }
