@@ -197,10 +197,13 @@ body {
   color: white;
 }
 .section_2__find {
-  width: 400px;
   height: 30px;
+  margin: 0;
+  padding: 0;
   border-radius: 10px;
-  border-color: #dee0ee;
+  background-color: #e0e1e7;
+  border-color: white;
+  font-family: "Roboto Slab", serif;
 }
 .section_2__h2 {
   font-family: "Roboto Slab", serif;

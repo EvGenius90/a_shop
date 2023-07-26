@@ -124,6 +124,7 @@ window.addEventListener("click", function (event) {
                         </div>
                     </div>
         </div>
+        
       `;
       products.insertAdjacentHTML("beforeend", productItem);
     }
@@ -137,8 +138,7 @@ window.addEventListener("click", function (event) {
 
 
 function statusbasket(){
-  let qwe = document.querySelector('.set-of-products')
-  if(qwe.children.length > 1){
+  if(products.children.length > 1){
     emptyBasket.classList.add('disp-none')
   }else(
     emptyBasket.classList.remove('disp-none')
