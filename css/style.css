@@ -320,10 +320,10 @@ body {
   border-radius: 15px;
   background-color: #fb8500;
   width: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section_2__text .add-product .minus:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   background-color: #d26f00;
   color: white;
 }
@@ -337,10 +337,10 @@ body {
   border: none;
   background-color: #fb8500;
   width: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section_2__text .add-product .plus:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
   background-color: #d26f00;
   color: white;
 }
@@ -443,13 +443,29 @@ body {
   z-index: 1;
   background-color: #fff;
   top: 70px;
-  min-height: 200px;
-  width: 300px;
-  border: 1px solid black;
+  height: 300px;
+  min-width: 310px;
+  max-width: 621px;
   text-align: center;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .set-of-products img {
-  width: 150px;
+  width: 100px;
+}
+.set-of-products .section_2__product {
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.set-of-products::-webkit-scrollbar-track {
+  background: orange;
 }
 
 .product-title {
@@ -458,4 +474,12 @@ body {
 
 .product-text {
   margin: 0;
+}
+
+.hidden {
+  height: 0;
+}
+
+.color-scheme {
+  color: red;
 }

@@ -7,6 +7,20 @@ let find = document.querySelector(".section_2__find");
 let logo_support = document.querySelector(".icon-support");
 let support = document.querySelector(".support");
 let products = document.querySelector(".set-of-products");
+let text_basket = document.querySelector(".text-basket");
+let like = document.querySelectorAll('.text__favoutires')
+
+for(let x of like){
+  x.addEventListener('click', function(){
+    x.classList.toggle('color-scheme')
+  })
+  
+}
+
+text_basket.addEventListener('click', function(){
+  products.classList.toggle('hidden')
+  // console.log('good')
+})
 
 // окно поддержки
 logo_support.addEventListener("click", function () {
