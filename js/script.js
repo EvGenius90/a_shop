@@ -10,11 +10,17 @@ let products = document.querySelector(".set-of-products");
 let text_basket = document.querySelector(".text-basket");
 let like = document.querySelectorAll('.text__favoutires')
 
+// счетчик любимых товаров
 for(let x of like){
   x.addEventListener('click', function(){
-    x.classList.toggle('color-scheme')
+    let colorCount = x.classList.toggle('color-scheme')
+    if(colorCount){
+      favourites.textContent++
+      console.log(colorCount)
+    }else{
+      favourites.textContent--
+    }
   })
-  
 }
 
 text_basket.addEventListener('click', function(){
@@ -60,7 +66,7 @@ window.addEventListener("click", function (n) {
     }
 
     // если находится в корзине и ровно нулю
-    if(parseInt(counter.innerText) == 0){
+    if(n.target.closest('.set-of-products') && parseInt(counter.innerText) == 0){
       n.target.closest('.section_2__product').remove()
     }
   }
