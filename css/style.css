@@ -106,6 +106,12 @@ body {
           box-shadow: 5px 4px 5px #fb8500;
   border-radius: 13px;
 }
+.sction-1__navigation a:active {
+  -webkit-box-shadow: 2px 2px 5px #fb8500;
+          box-shadow: 2px 2px 5px #fb8500;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
 .sction-1__label {
   position: absolute;
   height: 150px;
@@ -203,7 +209,8 @@ body {
   border-radius: 10px;
   background-color: #e0e1e7;
   border-color: white;
-  font-family: "Roboto Slab", serif;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
 }
 .section_2__h2 {
   font-family: "Roboto Slab", serif;
@@ -360,6 +367,12 @@ body {
   color: #fb8500;
   -webkit-box-shadow: 5px 4px 5px #fb8500;
           box-shadow: 5px 4px 5px #fb8500;
+}
+.text-basket:active {
+  -webkit-box-shadow: 2px 2px 5px #fb8500;
+          box-shadow: 2px 2px 5px #fb8500;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 .information {

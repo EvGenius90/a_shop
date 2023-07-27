@@ -25,16 +25,16 @@
         background-color: darken($buttons-color, 8%)
         color: white
     &__find
-        // width: 400px
         height: 30px
         margin: 0
         padding: 0
         border-radius: 10px
         background-color: lighten($color, 50%) 
         border-color: white
-        font-family: 'Roboto Slab', serif
+        font-family: $font_OpenSans
+        outline: none
     &__h2
-        font-family: 'Roboto Slab', serif
+        font-family: $font_RobotoSlab
         font-weight: 500
         font-size: 50px
         margin-bottom: 100px
@@ -86,7 +86,7 @@
             margin-bottom: 30px
             width: 250px
         h3
-            font-family: 'Roboto Slab', serif
+            font-family: $font_RobotoSlab
             margin-bottom: 15px
             font-weight: 400
         p
@@ -140,5 +140,8 @@
     border-radius: 10px
     &:hover
         color: $buttons-color
-        box-shadow: 5px 4px 5px #fb8500
+        box-shadow: 5px 4px 5px $buttons-color
+    &:active
+        box-shadow: 2px 2px 5px $buttons-color
+        transition: 0s
         
