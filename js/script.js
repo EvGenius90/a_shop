@@ -12,6 +12,7 @@ let text_basket = document.querySelector(".text-basket");
 let like = document.querySelectorAll(".text__favoutires");
 let faHeart = document.querySelector(".fa-heart");
 let emptyBasket = document.querySelector('.empty-basket')
+let section2 = document.querySelector('.section_2')
 
 // счетчик любимых товаров
 for (let x of like) {
@@ -136,7 +137,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
-
+// функция надписи "корзина пустая"
 function statusbasket(){
   if(products.children.length > 1){
     emptyBasket.classList.add('disp-none')
@@ -144,3 +145,22 @@ function statusbasket(){
     emptyBasket.classList.remove('disp-none')
   )
 }
+
+// функция для работы с посковиком
+find.addEventListener('input', function(){
+  let val = this.value
+  let elItems = document.querySelectorAll('.section_2__product')
+  if(val != ''){
+    elItems.forEach(function(elem){
+      if(elem.innerText.search(val) == -1){
+        elem.classList.add('disp-none')
+      }else{
+        elem.classList.remove('disp-none')
+      }
+    })
+  }else{
+    elItems.forEach(function(elem){
+      elem.classList.remove('disp-none')
+    })
+  }
+})
