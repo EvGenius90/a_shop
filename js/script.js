@@ -42,9 +42,9 @@ text_basket.addEventListener("click", function () {
 
 // закрытие корзины при клике области сайта
 document.addEventListener("click", function (event) {
-  if (event.target != text_basket && 
-    event.target.dataset.action != "plus" && 
-    event.target.dataset.action != "minus" && 
+  if (event.target != text_basket &&
+    event.target.dataset.action != "plus" &&
+    event.target.dataset.action != "minus" &&
     event.target.dataset.action != "to-basket") {
     products.classList.add("hidden");
   }
@@ -59,8 +59,8 @@ find.addEventListener("input", function () {
   }
 });
 
-// функция объекта window
-window.addEventListener("click", function (n) {
+// обработчик событий кол-ва товарав
+document.addEventListener("click", function (n) {
   let counter;
 
   // проверяем клик по кнопкам плюс или минус
@@ -91,7 +91,8 @@ window.addEventListener("click", function (n) {
   }
 });
 
-window.addEventListener("click", function (event) {
+// добавление товара в корзину
+document.addEventListener("click", function (event) {
   let product;
   if (event.target.hasAttribute("data-bask")) {
     // карточка товара

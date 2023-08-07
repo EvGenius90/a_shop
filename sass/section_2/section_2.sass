@@ -7,7 +7,7 @@
         width: 40px
         height: 40px
         display: inline
-        margin-right: 50px
+        margin-right: 25px
         p
             display: inline
     &__input
@@ -39,7 +39,7 @@
         font-size: 50px
         margin-bottom: 100px
         display: inline
-        margin-right: 150px
+        margin-right: 70px
     &__katalog
         display: flex
         flex-wrap: wrap
@@ -149,3 +149,59 @@
     transition: transform 0.25s
 .product-img:active
     transform: scale(2)
+
+.set-of-products
+    position: absolute
+    left: 330px
+    z-index: 1
+    background-color: #fff
+    top: 70px
+    height: 300px
+    min-width: 310px
+    max-width: 621px
+    overflow: scroll
+    display: flex
+    flex-wrap: wrap
+    transition: 0.5s
+    img
+        width: 100px
+    .section_2__product
+        height: 300px
+        margin-bottom: 15px
+.set-of-products::-webkit-scrollbar-track
+.empty-basket
+    margin: 45px auto
+    height: 30px
+    width: 150px
+    text-align: center
+    background-color: $buttons-color
+    border-radius: 15px
+    
+.product-title
+    margin: 0
+.product-text
+    margin: 0
+
+.hidden
+    height: 0
+
+.color-scheme
+    color: red
+    
+.disp-none
+    display: none
+
+
+.modal
+    position: fixed
+    left: 33%
+    top: 25%
+    z-index: 1
+    height: 600px
+    width: 700px
+    border: 1px solid black
+    background-color: white
+    // transition: 1s
+    img
+        height: 100%
+        width: 100%
