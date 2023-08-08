@@ -1,6 +1,5 @@
 "use strict";
 
-// переменные
 const basket = document.querySelector(".fa-cart-shopping__basket");
 const favourites = document.querySelector(".fa-heart__span");
 let search = document.querySelector(".section_2__button");
@@ -14,6 +13,14 @@ let faHeart = document.querySelector(".fa-heart");
 let emptyBasket = document.querySelector(".empty-basket");
 let section2 = document.querySelector(".section_2");
 let productImg = document.querySelector(".product-img");
+let contacts = document.querySelector('.sction-1__contacts')
+let hamburger = document.querySelector('.hamburger')
+
+// меню гамбургер
+document.querySelector('.hamburger').addEventListener('click', function(){
+  contacts.classList.toggle('sction-1__contacts_active')
+  hamburger.classList.toggle('hamburger_active')
+})
 
 // счетчик любимых товаров
 for (let x of like) {
@@ -167,3 +174,4 @@ find.addEventListener("input", function () {
     }
   }
 });
+

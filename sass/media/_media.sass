@@ -6,6 +6,8 @@
     .section_2
         .icons
             margin-right: 130px
+    .set-of-products
+        top: 57px
 
 @media ( max-width: 991px )
     .container
@@ -34,11 +36,124 @@
         ul
             padding: 0
             font-size: 13px
+    .set-of-products
+        left: 50px
+        top: 57px
     
 @media ( max-width: 767px )
+    body
+        padding-top: 40px
     .container
         width: 540px
+    .sction-1__contacts
+        position: fixed
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        top: 0
+        left: -100%
+        width: 50%
+        height: 100vh
+        padding: 20px 15px
+        opacity: 0.9
+        transition: 0.6s all
+        z-index: 1
+        &_active
+            left: 0
+        p
+            font-size: 20px
+            margin-bottom: 50px
+        .sction-1__images
+            display: none
+    .hamburger
+        display: block
+        position: absolute
+        right: 10px
+        top: 5%
+        transform: translateY(-50%)
+        width: 20px
+        height: 12px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background-color: black
+            margin-bottom: 2px
+            transition: 0.6s all
+        &_active
+            span
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
+    .sction-1__navigation
+        font-size: 15px
+        padding: 0
+    .sction-1__label
+        top: 70px
+    .section_2__hr
+        width: 550px
+    hr
+        width: 550px
+    .section_2__navigation
+        height: 200px
+        display: flex
+        align-content: space-around
+        flex-wrap: wrap
+    .set-of-products
+        left: 0
+        top: 130px
+        max-width: 100px
+    .section_2__h2
+        margin: 0 150px 0 0
+    .section_2
+        .icons
+            display: flex
+            align-items: center
+            margin-right: 150px
+        .favourites
+            width: 170px
+            margin: 0
+        .set-of-products
+            
+    .section_2__katalog
+        .section_2__product
+            width: 260px
+            height: 350px
+        .product-img
+            width: 120px
+        .section_2__text
+            .product-title
+                font-size: 18px
+                font-weight: 500
+            .price
+                font-size: 20px
+            .old-price
+                font-size: 20px
+    .footer__menu
+        flex-wrap: wrap
+        justify-content: space-between
+        .footer__soc_pay
+            margin-top: 40px
+        
+
         
 @media ( max-width: 575px )
     .container
         width: 100%
+    .sction-1__contacts
+        font-size: 5px
+    .sction-1__navigation
+        display: flex
+        flex-wrap: wrap
+        font-size: 10px
+    .section_2__find
+        width: 300px
+    .section_2__hr
+        width: 300px
+    hr
+        width: 300px
+    
