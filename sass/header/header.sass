@@ -13,7 +13,7 @@
         background-color: lighten(#8184a1, 35%) 
         margin-bottom: 20px
         a
-            transition: 0.5s
+            transition: 0.5s all
         a:hover
             color: #cc9900
         p
@@ -30,14 +30,13 @@
             list-style: none
         a
             border-radius: 13px
-            transition: 0.5s
+            transition: 0.5s all
         a:hover
             color: #cc9900
             box-shadow: 5px 4px 5px $buttons-color
             border-radius: 13px
         a:active
             box-shadow: 2px 2px 5px $buttons-color
-            transition: 0s
     &__label
         position: absolute
         height: 170px
@@ -58,29 +57,6 @@
                 width: 145px
                 border-color: $buttons-color
                 margin: 0 auto
-
-.icon-support
-    border: 1px solid black
-    height: 100px
-    width: 150px
-    position: fixed
-    right: 0
-    bottom: 0
-    background: url('../img/support.jpg') 0 0/100% auto no-repeat
-    z-index: 2
-.support
-    border: 1px solid black
-    height: 450px
-    width: 300px
-    position: fixed
-    right: 0
-    bottom: 0
-    background-color: green
-    z-index: 2
-.is-active
-    height: 0
-.height-bottom
-    bottom: 450px
 
 .hamburger
     display: none

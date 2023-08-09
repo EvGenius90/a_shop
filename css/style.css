@@ -69,8 +69,8 @@ body {
   margin-bottom: 20px;
 }
 .sction-1__contacts a {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 .sction-1__contacts a:hover {
   color: #cc9900;
@@ -97,8 +97,8 @@ body {
 }
 .sction-1__navigation a {
   border-radius: 13px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 .sction-1__navigation a:hover {
   color: #cc9900;
@@ -109,8 +109,6 @@ body {
 .sction-1__navigation a:active {
   -webkit-box-shadow: 2px 2px 5px #fb8500;
           box-shadow: 2px 2px 5px #fb8500;
-  -webkit-transition: 0s;
-  transition: 0s;
 }
 .sction-1__label {
   position: absolute;
@@ -136,36 +134,6 @@ body {
   width: 145px;
   border-color: #fb8500;
   margin: 0 auto;
-}
-
-.icon-support {
-  border: 1px solid black;
-  height: 100px;
-  width: 150px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background: url("../img/support.jpg") 0 0/100% auto no-repeat;
-  z-index: 2;
-}
-
-.support {
-  border: 1px solid black;
-  height: 450px;
-  width: 300px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background-color: green;
-  z-index: 2;
-}
-
-.is-active {
-  height: 0;
-}
-
-.height-bottom {
-  bottom: 450px;
 }
 
 .hamburger {
@@ -634,7 +602,7 @@ body {
     top: 0;
     left: -100%;
     width: 50%;
-    height: 100vh;
+    height: 100dvh;
     padding: 20px 15px;
     opacity: 0.9;
     -webkit-transition: 0.6s all;
@@ -772,6 +740,10 @@ body {
     font-size: 10px;
     margin-right: 10px;
   }
+  .sction-1__navigation a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .sction-1__label {
     left: 3%;
   }
@@ -784,7 +756,7 @@ body {
     font-size: 35px;
   }
   .section_2__find {
-    width: 230px;
+    width: 73%;
   }
   .section_2__button {
     height: 30px;
