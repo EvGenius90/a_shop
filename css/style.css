@@ -777,7 +777,7 @@ body {
     height: 30px;
   }
   .section_2__katalog .section_2__product {
-    width: 160px;
+    width: 155px;
   }
   .section_2__katalog .product-img {
     width: 100px;
@@ -810,7 +810,7 @@ body {
     font-size: 12px;
   }
   .set-of-products {
-    top: 10%;
+    top: 5%;
   }
   .set-of-products .section_2__add-product .add-product .value {
     width: 20px;
