@@ -608,9 +608,13 @@ body {
     -webkit-transition: 0.6s all;
     transition: 0.6s all;
     z-index: 1;
+    text-align: center;
   }
   .sction-1__contacts_active {
     left: 0;
+  }
+  .sction-1__contacts a {
+    width: 100%;
   }
   .sction-1__contacts p {
     font-size: 20px;
@@ -655,6 +659,10 @@ body {
   .sction-1__navigation {
     font-size: 15px;
     padding: 0;
+  }
+  .sction-1__navigation a:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .sction-1__label {
     top: 70px;
@@ -729,7 +737,14 @@ body {
     width: 100%;
   }
   .sction-1__contacts {
-    font-size: 5px;
+    padding: 0;
+    text-align: center;
+  }
+  .sction-1__contacts a {
+    width: 100%;
+  }
+  .sction-1__contacts p {
+    font-size: 15px;
   }
   .sction-1__navigation {
     display: -webkit-box;
