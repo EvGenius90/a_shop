@@ -275,6 +275,10 @@ body {
   color: #e76f51;
   font-size: 20px;
 }
+.section_2__product .product-img:hover {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
 .section_2__text {
   position: absolute;
   bottom: 0px;
@@ -424,7 +428,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 600px;
-  height: 400px;
+  height: 350px;
   border: 1px solid black;
   z-index: 1;
   background-color: white;
@@ -434,7 +438,6 @@ body {
 .zoomImg img {
   width: 300px;
   height: 300px;
-  margin: 15px;
 }
 .zoomImg button {
   position: absolute;
@@ -452,7 +455,7 @@ body {
 }
 .zoomImg .inside {
   border: 1px solid black;
-  margin: 28px;
+  margin: 20px;
   background-color: white;
 }
 
