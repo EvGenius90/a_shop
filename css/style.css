@@ -768,8 +768,8 @@ body {
     margin-top: 40px;
   }
   .zoomImg {
-    width: 450px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
   }
   .zoomImg img {
     width: 200px;
@@ -779,6 +779,10 @@ body {
 @media (max-width: 575px) {
   .container {
     width: 100%;
+  }
+  .sction-1 {
+    background: none;
+    height: 250px;
   }
   .sction-1__contacts {
     padding: 0;
@@ -809,7 +813,7 @@ body {
             box-shadow: none;
   }
   .sction-1__label {
-    left: 3%;
+    left: 5%;
   }
   .section_2__find {
     width: 300px;
@@ -873,6 +877,7 @@ body {
   }
   .information__text {
     margin-right: 10px;
+    margin-left: 10px;
   }
   .information__text h1 {
     font-size: 18px;
