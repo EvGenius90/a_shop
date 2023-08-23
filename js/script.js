@@ -18,13 +18,11 @@ let hamburger = document.querySelector('.hamburger')
 let hrefImg = document.querySelectorAll('.href-img')
 let zoomImg = document.querySelector('.zoomImg')
 let inside = document.querySelector('.inside')
-let overlay = document.querySelector('.overlay')
 
 // вывод окна при нажатии на картинку
 for(let i of hrefImg){
   i.addEventListener('click', function(){
     zoomImg.classList.remove('disp-none')
-    overlay.classList.remove('disp-none')
     inside.innerHTML = i.innerHTML
   })
 }
